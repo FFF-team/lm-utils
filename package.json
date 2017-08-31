@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/FFF-team/lm-utils.git"
   },
-  "author": "",
+  "author": "David Feng && mxr",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FFF-team/lm-utils/issues"
