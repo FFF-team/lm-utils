@@ -1,12 +1,7 @@
-const getCookie = (name) => {
-    let reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-    let arr = document.cookie.match(reg);
-    if (!arr) {
-        return null;
-    } else {
-        return arr[2];
-    }
-};
+import { xssFilter } from './src/xssFilter'
+import { getCookie, setCookie } from './src/cookie'
+import { strReverse, strTirm, strTrunc } from './src/string'
+import { arrSortQuick, arrSortBubble, arrSortMerge } from './src/sort'
 
 const matchSearch = (search, reg) => search.match(reg) && search.match(reg)[1] ? search.match(reg)[1] : null;
 
@@ -90,19 +85,6 @@ const locStorage = {
     }
 };
 
-/**
- * xssFilter
- */
-const xssFilter = (str) => {
-    str = str.replace(/&/g, '&amp;');
-    str = str.replace(/</g, '&lt;');
-    str = str.replace(/>/g, '&gt;');
-    str = str.replace(/'/g, '&acute;');
-    str = str.replace(/"/g, '&quot;');
-    str = str.replace(/\|/g, '&brvbar;');
-    return str;
-};
-
 const getAbsoultePath = href => {
     let link = document.createElement('a');
     link.href = href;
@@ -164,6 +146,7 @@ const debounce = (func, wait, immediate) => {
 
 
 export {
+
     getCookie,
     matchSearch,
     stringifyParams,
@@ -174,5 +157,14 @@ export {
     pageBackFromNextPage,
     xssFilter,
     getAbsoultePath,
-    debounce
+    debounce,
+    arrSortQuick,
+    arrSortBubble,
+    arrSortMerge,
+    strReverse,
+    strTirm,
+    strTrunc,
+    getCookie,
+    setCookie,
+
 }
