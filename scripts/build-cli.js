@@ -8,8 +8,8 @@ var exec = require('child_process').exec;
 
 process.env.BABEL_ENV = 'development';
 
-var LIB_PATH = './lib';
-var taskLibDir = './src';
+var LIB_PATH = './build';
+var taskLibDir = './libs';
 
 
 var emptyDir = function(fileUrl){
@@ -35,7 +35,7 @@ function fsExistsSync(path) {
 }
 if(!fsExistsSync(LIB_PATH)){
   // fs.mkdirSync(LIB_PATH);
-  shell.mkdir('-p', LIB_PATH + '/src');
+  shell.mkdir('-p', LIB_PATH + '/libs');
 } else {
   emptyDir(LIB_PATH);
 }
