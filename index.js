@@ -147,7 +147,6 @@ const debounce = (func, wait, immediate) => {
 
 export {
 
-    getCookie,
     matchSearch,
     stringifyParams,
     isIosApp,
