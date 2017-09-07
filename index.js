@@ -1,7 +1,7 @@
-import { xssFilter } from './src/xssFilter'
-import { getCookie, setCookie } from './src/cookie'
-import { strReverse, strTirm, strTrunc } from './src/string'
-import { arrSortQuick, arrSortBubble, arrSortMerge } from './src/sort'
+import { xssFilter } from './libs/xssFilter'
+import { getCookie, setCookie } from './libs/cookie'
+import { strReverse, strTirm, strTrunc } from './libs/string'
+import { arrSortQuick, arrSortBubble, arrSortMerge } from './libs/sort'
 
 const matchSearch = (search, reg) => search.match(reg) && search.match(reg)[1] ? search.match(reg)[1] : null;
 

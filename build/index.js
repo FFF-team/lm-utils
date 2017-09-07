@@ -5,13 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.setCookie = exports.getCookie = exports.strTrunc = exports.strTirm = exports.strReverse = exports.arrSortMerge = exports.arrSortBubble = exports.arrSortQuick = exports.debounce = exports.getAbsoultePath = exports.xssFilter = exports.pageBackFromNextPage = exports.locStorage = exports.is58App = exports.isWechat = exports.isIosApp = exports.stringifyParams = exports.matchSearch = undefined;
 
-var _xssFilter = require('./src/xssFilter');
+var _xssFilter = require('./libs/xssFilter');
 
-var _cookie = require('./src/cookie');
+var _cookie = require('./libs/cookie');
 
-var _string = require('./src/string');
+var _string = require('./libs/string');
 
-var _sort = require('./src/sort');
+var _sort = require('./libs/sort');
 
 var matchSearch = function matchSearch(search, reg) {
     return search.match(reg) && search.match(reg)[1] ? search.match(reg)[1] : null;
