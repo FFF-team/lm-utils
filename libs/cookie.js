@@ -23,7 +23,7 @@ export const getCookie = (key) => {
 
 	let keyEQ = key + '=';
 	let itemList = document.cookie.split(';');
-	for (let i = 0, len = itemList.length; i <= len; i++) {
+	for (let i = 0, len = itemList.length; i < len; i++) {
 
 		let item = itemList[i];
 		item = item.replace(/(^\s*)/g, '');
