@@ -25,7 +25,7 @@ var getCookie = exports.getCookie = function getCookie(key) {
 
 	var keyEQ = key + '=';
 	var itemList = document.cookie.split(';');
-	for (var i = 0, len = itemList.length; i <= len; i++) {
+	for (var i = 0, len = itemList.length; i < len; i++) {
 
 		var item = itemList[i];
 		item = item.replace(/(^\s*)/g, '');
